@@ -24,7 +24,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
         
-        guard let articles=data.articles else {
+        guard let articles=self.data.articles else {
             return 0
         }
         return articles.count
@@ -40,7 +40,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         guard let articles=data.articles else {
             return UITableViewCell(frame: .zero)
         }
-        cell.textLabel?.text=data.articles?[indexPath.row].title
+        cell.textLabel?.text=articles[indexPath.row].title
 
                 return cell
         /*
